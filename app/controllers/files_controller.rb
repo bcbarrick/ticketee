@@ -1,6 +1,13 @@
 class FilesController < ApplicationController
   before_filter :authenticate_user!
 
+  def new
+    @ticket = Ticket.new
+    asset = @ticket.assets.build
+    render :partial => "files/form",
+    :locals => { :number => params[:number].to_i }
+  end
+
   def show
     asset = Asset.find(params[:id])
     if current_user.admin || can?(:view, asset.ticket.project)

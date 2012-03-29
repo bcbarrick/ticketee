@@ -43,7 +43,7 @@ gem 'paperclip'
 # gem 'ruby-debug19', :require => 'ruby-debug'
 
 group :test, :development do
-  gem 'rspec-rails', '~> 2.8'
+  gem 'rspec-rails'
 end
 
 group :test do

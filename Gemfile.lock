@@ -184,7 +184,7 @@ DEPENDENCIES
   jquery-rails
   paperclip
   rails (= 3.2.2)
-  rspec-rails (~> 2.8)
+  rspec-rails
   sass-rails (~> 3.2.3)
   sqlite3
   uglifier (>= 1.0.3)

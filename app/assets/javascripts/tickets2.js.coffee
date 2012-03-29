@@ -5,10 +5,9 @@
 $(->
   $('a#add_another_file').click(->
     url = "/files/new?number=" + $('#files input').length
-    $.get(url, 
-      (data)->
-        $('#files').append(data)
-      'html'
+    $.ajax(url: url, 
+#      success: (data)->$('#files').append('<p>eatme</p>');
+      success: (data)->$('#files').append(data);
     )
   )
 )
